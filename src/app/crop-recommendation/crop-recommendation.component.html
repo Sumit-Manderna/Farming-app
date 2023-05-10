@@ -1,0 +1,62 @@
+<p class="text-center fs-1">RECOMMENDATION OPTIONS</p>
+  <div class="container mt-3">
+    <form>
+      <div class="row">
+        <div class="col">
+            <label for="State">State</label>
+            <select class="form-select" id="State" name="State" [(ngModel)]="inputData.state">
+              <option value="" selected>--select state--</option>
+              <option *ngFor="let state of stateList" [value]="state"  >
+                  {{state}}
+              </option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="trade2">City</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="city" name="city" aria-label="city" aria-describedby="basic-addon1" [(ngModel)]="inputData.city">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+            <label for="Soil">Soil</label>
+            <select class="form-select" id="Soil" name="Soil" [(ngModel)]="inputData.soil">
+              <option value="" selected>--select soil--</option>
+              <option *ngFor="let Soil of soilList" [value]="Soil"  >
+                  {{Soil}}
+              </option>
+            </select>
+        </div>
+        <div class="col">
+            <label for="temperature">Temperature</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="temperature" name = "temperature" aria-label="temperature" aria-describedby="basic-addon1" [(ngModel)]="inputData.temperature">
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="climate">Climate</label>
+          <select class="form-select" id="climate" name="climate" [(ngModel)]="inputData.climate">
+            <option value="" selected>--select climate--</option>
+            <option *ngFor="let climate of climateList" [value]="climate"  >
+                {{climate}}
+            </option>
+          </select>
+        </div>
+        <div class="col">
+            <label for="trade4">Rainfall</label>
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="rainfall" name="rainfall" aria-label="rainfall" aria-describedby="basic-addon1" [(ngModel)]="inputData.rainfall">
+            </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <button type="button" (click)="formSubmit()" class="btn btn-success mt-3 w-25 p-2">
+          Go
+        </button>
+      </div>
+    </form>
+    
+  </div>

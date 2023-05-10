@@ -1,0 +1,18 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-success mt-0" >
+    <a class="navbar-brand p-4" href="#" style="color: white;">Farmer App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item me-5">
+          <a routerLink = "recommendation">Crop Suggestion</a>
+        </li >
+        <li class="nav-item"> <a routerLink = "remedies">Remedies</a></li>
+        <li class="nav-item"> <button *ngIf="showButton" (click)="createGraph()">Make Graph</button></li>
+      </ul>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
